@@ -1,3 +1,5 @@
+/* Base */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,5 +7,130 @@
 }
 
 body {
+    background-image: linear-gradient(#fff, #F0F1FF);
     font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.button {
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 28px;
+    padding: 0.625em 1.5em;
+    line-height: 1.625;
+
+}
+
+.primary {
+    color: #fff;
+    background-color: #13183f;
+}
+
+.secondary {
+    background-image: linear-gradient(#FF6F48, #F02AA6);
+    color: #fff;
+}
+
+.tertiary {
+    color: #fff;
+    background-image: linear-gradient(#4851FF, #F02AA6);
+}
+
+/* Typography */
+
+h1 {
+    color: #13183f;
+    font-size: 2.5rem;
+    margin: 0.65em auto;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #13183f;
+    font-size: 1.25rem;
+    margin: 1.25em auto 0;
+}
+
+p {
+    color: #83869a;
+    line-height: 1.625;
+    margin: 1.5em auto;
+}
+
+a {
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.625;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Layout and Appearance */
+
+.header {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.hero,
+.features {
+    margin: 2em 1em;
+}
+
+.picture {
+    margin: 2.5em auto;
+    text-align: center;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+}
+
+.feature {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    padding: 1.75em;
+
+}
+
+.feature img {
+    position: absolute;
+    top: -25px;
+}
+
+.feature p {
+    margin-block-start: 1em;
+}
+
+.feature .button {
+    color: #f74780;
+    padding: 0;
+}
+
+.unique {
+    border-radius: 10px;
+    color: #fff;
+    background-image: linear-gradient(#FF6F48, #F02AA6);
+}
+
+.footer {
+    background-color: #13183f;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 2.5em 1em;
+    margin-block-start: 5em;
 }
