@@ -29,14 +29,30 @@ img {
     background-color: #13183f;
 }
 
+.primary:hover {
+    background-color: #666ca3;
+}
+
 .secondary {
     background-image: linear-gradient(#FF6F48, #F02AA6);
     color: #fff;
 }
 
+.secondary:hover {
+    background-image: linear-gradient(#FF6F48, #F02AA6);
+}
+
 .tertiary {
     color: #fff;
     background-image: linear-gradient(#4851FF, #F02AA6);
+}
+
+.tertiary:hover {
+    background-image: linear-gradient(#4851FF, #F02AA6);
+}
+
+.quaternary:hover {
+    color: #ffa7c3;
 }
 
 /* Typography */
@@ -136,25 +152,28 @@ a {
 
 .footer {
     background-color: #13183f;
+    padding: 2.5em 1em;
+    margin-block-start: 5em;
+}
+
+.footer .layout_wrapper {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding: 2.5em 1em;
-    margin-block-start: 5em;
 }
 
 /* Media Queries */
 
 @media screen and (min-width: 615px) {
 
-   
+
 
     .header {
         margin: 1.5em 2.5em;
     }
 
     .footer {
-        padding: 2.5em 2.5em; 
+        padding: 2.5em 2.5em;
     }
 
     .hero {
@@ -163,9 +182,9 @@ a {
         padding-block-start: 1.5em;
     }
 
-    .wrapper {
+    .background_wrapper {
         background-image: url(./assets/image-hero-tablet.png);
-        background-position: right -265px top -75px; 
+        background-position: right -265px top -75px;
         background-repeat: no-repeat;
         background-size: 640px 640px;
     }
@@ -176,7 +195,7 @@ a {
         object-fit: cover;
         position: relative;
         overflow: hidden;
-        
+
     }
 
     .picture img {
@@ -190,5 +209,50 @@ a {
 
     .features {
         margin: 2em 2.5em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        background-position: right -245px top -75px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .layout_wrapper {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    .content {
+        max-width: 450px;
+    }
+
+    .background_wrapper {
+        background-image: url(./assets/image-hero-desktop.png);
+        background-size: 925px 850px;
+        background-position: right -265px top -150px;
+    }
+
+    .background_wrapper,
+    .wrapper_bottom {
+        padding: 1em 0 0;
+    }
+
+    .features {
+        /* grid-template-columns: repeat(auto-fit, minmax(1fr, 350px)); */
+        margin: 2em 0;
+    }
+
+    .footer {
+        padding: 2em 0;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .background_wrapper {
+        background-position: right 0 top -160px;
     }
 }
